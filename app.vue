@@ -28,6 +28,9 @@ interface OptionsState {
     popularity: Popularity.TRENDY,
     length: Length.SHORT
   })
+
+  const names =ref<string[]>([]);
+
 </script>
 
 <template>
@@ -76,6 +79,7 @@ interface OptionsState {
           
         </div>
         </div>
+        <button class="primary">Find names</button>
     </div>
   </div>
 </template>
@@ -127,6 +131,17 @@ interface OptionsState {
 .option-active {
   background-color:rgb(249,87,89);
   color:white
+}
+
+.primary {
+  background-color: rgb(249,87,89);;
+  color:white;
+  border: none;
+  border-radius: 6.5rem;
+  padding: 0.75rem 4rem;
+  font-size: 1rem;
+  margin-top: 1rem;
+  cursor: pointer;
 }
 
 </style>
