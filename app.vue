@@ -60,12 +60,8 @@ interface OptionsState {
         <button class="primary" @click="computeSelectedNames">Find names</button>
     </div>
     <div class="cards-container">
-      <div v-for="name in selectedNames" :key="name" class="card">
-          <h4>{{ name }}</h4>
-        <p>x</p>
-      </div>
+      <CardName v-for="name in selectedNames" :key="name" :name="name" />
     </div>
-    
   </div>
 </template>
 
@@ -100,24 +96,7 @@ interface OptionsState {
   flex-wrap: wrap;
 }
 
-.card{
-  background-color: rgb(27,60,138);
-  width: 29%;
-  color:rgb(221, 229, 236);
-  border-radius: 1rem;
-  padding: 0.1rem;
-  margin-right: 0.5rem;
-  margin-bottom: 0.5rem;
-  position: relative;
-}
 
-.card p{
-  position: absolute;
-  top: -30%;
-  left: 93%;
-  cursor: pointer;
-  color: rgba(255,255,255,0.178)
-}
 </style>
 
 
